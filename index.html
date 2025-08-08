@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Program Pascasarjana UNIS - Cakra Inti</title>
+  <meta name="description"
+    content="Program Pascasarjana UNIS bekerjasama dengan Yayasan Cakra Inti Indonesia. Kuliah online fleksibel dan terjangkau untuk profesional.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-color: #1e3a8a;
+      /* Deep Blue */
+      --secondary-color: #166534;
+      /* Green */
+      --accent-color: #fbbf24;
+      /* Amber */
+      --text-dark: #1f2937;
+      --text-light: #f9fafb;
+      --bg-light: #ffffff;
+      --bg-gray: #f3f4f6;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.7;
+      color: var(--text-dark);
+      background-color: var(--bg-light);
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    section {
+      padding: 60px 20px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-weight: 700;
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      color: var(--primary-color);
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: var(--primary-color);
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      color: var(--primary-color);
+    }
+
+    /* === PERUBAHAN DI SINI === */
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      /* Padding ditambah */
+      color: var(--text-light);
+      /* Warna teks default di hero */
+      background-image:
+        /* Lapisan warna semi-transparan */
+        linear-gradient(rgba(30, 58, 138, 0.7), rgba(30, 58, 138, 0.7)),
+        /* URL Gambar Latar Belakang */
+        url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero h1 {
+      color: var(--text-light);
+      /* Warna H1 diubah jadi putih */
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 20px auto 30px;
+      color: var(--bg-gray);
+      /* Warna paragraf diubah jadi abu-abu terang */
+    }
+
+    /* === AKHIR PERUBAHAN === */
+
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--text-light);
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background-color: var(--accent-color);
+      /* Diubah ke warna aksen agar lebih menonjol */
+      color: var(--text-dark);
+    }
+
+    .btn-primary:hover {
+      background-color: #f59e0b;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-secondary {
+      background-color: var(--secondary-color);
+    }
+
+    .btn-secondary:hover {
+      background-color: #14532d;
+      transform: translateY(-2px);
+    }
+
+    .grid {
+      display: grid;
+      gap: 30px;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+
+    .card {
+      background: var(--bg-light);
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    ul.feature-list {
+      list-style: none;
+      padding: 0;
+      max-width: 500px;
+      margin: 20px auto;
+    }
+
+    ul.feature-list li {
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+      font-size: 1.1rem;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 15px;
+      font-family: inherit;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .map-container {
+      width: 100%;
+      height: 400px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #ccc;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
+
+    .testimonial-card {
+      background: var(--bg-gray);
+      border-left: 5px solid var(--accent-color);
+    }
+
+    .testimonial-card p.quote {
+      font-style: italic;
+      color: #374151;
+    }
+
+    .testimonial-card p.author {
+      font-weight: 600;
+      text-align: right;
+      margin-top: 15px;
+    }
+
+    footer {
+      background-color: var(--primary-color);
+      color: var(--text-light);
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    footer a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* WhatsApp Chat Widget */
+    #whatsapp-chat {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      z-index: 1000;
+      transition: transform 0.3s ease;
+    }
+
+    #whatsapp-chat:hover {
+      transform: scale(1.1);
+    }
+
+    #whatsapp-chat img {
+      width: 50px;
+      height: 50px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="hero">
+    <h1>Program Pascasarjana UNIS</h1>
+    <p>Kelas Kerjasama bersama Yayasan Cakra Inti Indonesia — Fleksibel, Terjangkau, dan Berkualitas.</p>
+    <a href="#form-pendaftaran" class="btn btn-primary">Daftar Sekarang</a>
+  </header>
+
+  <main class="container">
+
+    <section id="program-studi">
+      <h2>Program Studi</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Magister Ilmu Administrasi</h3>
+          <p>Program magister dengan konsentrasi relevan untuk administrasi modern dan kebijakan publik.</p>
+        </div>
+        <div class="card">
+          <h3>Magister Ilmu Hukum</h3>
+          <p>Dirancang untuk para profesional hukum yang ingin memperdalam keahlian di berbagai bidang.</p>
+        </div>
+        <div class="card">
+          <h3>Magister Manajemen</h3>
+          <p>Fokus pada pengembangan keterampilan manajerial dan kepemimpinan strategis di era digital.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="jadwal">
+      <h2>Jadwal & Pendaftaran</h2>
+      <ul class="feature-list">
+        <li><strong>Perkuliahan:</strong> Setiap Jumat & Sabtu (Online)</li>
+        <li><strong>Gelombang Pendaftaran:</strong> Juli – September</li>
+      </ul>
+      <div style="text-align:center; margin-top: 30px;">
+        <a href="#form-pendaftaran" class="btn btn-secondary">Lihat Formulir Pendaftaran</a>
+      </div>
+    </section>
+
+    <section id="biaya">
+      <h2>Biaya & Beasiswa</h2>
+      <ul class="feature-list">
+        <li><strong>SPP:</strong> Rp 1.250.000 per bulan (selama 4 semester)</li>
+        <li><strong>Biaya Pendaftaran:</strong> Rp 550.000</li>
+        <li><strong>Beasiswa:</strong> Tersedia Beasiswa Prestasi dan Karyawan</li>
+      </ul>
+    </section>
+
+    <section id="form-pendaftaran">
+      <h2>Hubungi Kami & Pendaftaran</h2>
+      <form id="contactForm">
+        <input type="text" id="nama" name="nama" placeholder="Nama Lengkap Anda" required>
+        <input type="text" id="kontak" name="kontak" placeholder="Email atau Nomor WhatsApp Aktif" required>
+        <textarea id="pesan" name="pesan" placeholder="Tuliskan pesan atau pertanyaan Anda di sini..."
+          required></textarea>
+        <button type="submit" class="btn btn-primary"
+          style="background-color: var(--primary-color); color: var(--text-light);">Kirim via WhatsApp</button>
+      </form>
+    </section>
+
+    <section id="lokasi">
+      <h2>Lokasi Kampus</h2>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.577170753736!2d106.63663081531876!3d-6.187211062369765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f91146a78379%3A0x9048f735c82365e2!2sUniversitas%20Islam%20Syeh%20Yusuf!5e0!3m2!1sen!2sid!4v1662354817924!5m2!1sen!2sid"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+
+    <section id="galeri">
+      <h2>Galeri Kegiatan</h2>
+      <div class="gallery-grid">
+        <img src="https://placehold.co/300x200/1e3a8a/ffffff?text=Kegiatan+1" alt="Galeri 1">
+        <img src="https://placehold.co/300x200/166534/ffffff?text=Kegiatan+2" alt="Galeri 2">
+        <img src="https://placehold.co/300x200/fbbf24/000000?text=Kegiatan+3" alt="Galeri 3">
+        <img src="https://placehold.co/300x200/374151/ffffff?text=Kegiatan+4" alt="Galeri 4">
+      </div>
+    </section>
+
+    <section id="testimoni">
+      <h2>Testimoni Alumni</h2>
+      <div class="grid grid-2">
+        <div class="card testimonial-card">
+          <p class="quote">"Program ini sangat membantu saya meningkatkan karir. Materi yang relevan dan dosen yang ahli
+            di bidangnya membuat perkuliahan sangat bermanfaat."</p>
+          <p class="author">— Alumni Magister Manajemen</p>
+        </div>
+        <div class="card testimonial-card">
+          <p class="quote">"Kuliah online dengan jadwal yang fleksibel sangat cocok untuk saya yang bekerja. Saya bisa
+            tetap produktif tanpa mengorbankan pendidikan."</p>
+          <p class="author">— Alumni Magister Hukum</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2024 Universitas Islam Syekh Yusuf. Dikembangkan oleh Tim Cakra Inti Indonesia.</p>
+    <p>
+      <a href="https://cakrainti.id" target="_blank" rel="noopener noreferrer">🌐 www.cakraintiindonesia.id</a>
+    </p>
+  </footer>
+
+  <a id="whatsapp-chat" href="https://wa.me/6282312305334?text=Halo%20admin%20UNIS%2C%20saya%20ingin%20bertanya..."
+    target="_blank" rel="noopener noreferrer">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2044px-WhatsApp.svg.png"
+      alt="WhatsApp Chat">
+  </a>
+
+  <script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Handle form submission
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const nama = document.getElementById('nama').value;
+      const kontak = document.getElementById('kontak').value;
+      const pesan = document.getElementById('pesan').value;
+
+      const whatsappLink = `https://wa.me/6282312305334?text=Halo,%20nama%20saya%20${encodeURIComponent(nama)}.%0AEmail/Kontak:%20${encodeURIComponent(kontak)}.%0A%0APesan:%20${encodeURIComponent(pesan)}`;
+
+      window.open(whatsappLink, '_blank');
+    });
+  </script>
+
+</body>
+
+</html>
